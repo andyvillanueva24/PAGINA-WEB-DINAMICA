@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Dinámico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario Dinámico</h2>
+        
+        <!-- Mensaje de error opcional -->
+        <!-- Puedes mostrar esto si hay un error en la validación del formulario -->
+        <!-- <div class="error">Por favor, complete todos los campos requeridos.</div> -->
+        
+        <form action="procesar_formulario.php" method="POST" id="dynamicForm">
+            <!-- Sección de Experiencia Laboral -->
+            <div class="dynamic-section">
+                <label for="experiencia_laboral">Experiencia Laboral:</label>
+                <div class="dynamic-fields" id="experiencia_laboral">
+                    <input type="text" name="experiencia_laboral[]" placeholder="Añade tu experiencia laboral">
+                </div>
+                <button type="button" class="add-field" data-target="#experiencia_laboral">Añadir Experiencia</button>
+            </div>
+
+            <!-- Sección de Formación -->
+            <div class="dynamic-section">
+                <label for="formacion">Formación:</label>
+                <div class="dynamic-fields" id="formacion">
+                    <input type="text" name="formacion[]" placeholder="Añade tu formación">
+                </div>
+                <button type="button" class="add-field" data-target="#formacion">Añadir Formación</button>
+            </div>
+
+            <!-- Sección de Idiomas -->
+            <div class="dynamic-section">
+                <label for="idiomas">Idiomas:</label>
+                <div class="dynamic-fields" id="idiomas">
+                    <input type="text" name="idiomas[]" placeholder="Añade tus idiomas">
+                </div>
+                <button type="button" class="add-field" data-target="#idiomas">Añadir Idioma</button>
+            </div>
+
+            <!-- Sección de Aptitudes y Habilidades -->
+            <div class="dynamic-section">
+                <label for="aptitudes">Aptitudes y Habilidades:</label>
+                <div class="dynamic-fields" id="aptitudes">
+                    <input type="text" name="aptitudes[]" placeholder="Añade tus aptitudes y habilidades">
+                </div>
+                <button type="button" class="add-field" data-target="#aptitudes">Añadir Aptitud</button>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit">Guardar datos</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
